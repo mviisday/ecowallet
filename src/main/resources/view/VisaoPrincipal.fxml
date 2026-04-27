@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml">
+
+    <Label text="EcoWallet" />
+
+    <!-- CAMPOS -->
+    <TextField fx:id="descricaoField" promptText="Descrição"/>
+    <TextField fx:id="valorField" promptText="Valor"/>
+    <DatePicker fx:id="dataPicker"/>
+
+    <!-- BOTÕES -->
+    <HBox spacing="10">
+        <Button text="Adicionar Receita" fx:id="btnReceita"/>
+        <Button text="Adicionar Despesa" fx:id="btnDespesa"/>
+    </HBox>
+
+    <!-- TABELA -->
+    <TableView fx:id="tabelaTransacoes">
+        <columns>
+            <TableColumn text="Descrição"/>
+            <TableColumn text="Valor"/>
+            <TableColumn text="Data"/>
+            <TableColumn text="Tipo"/>
+        </columns>
+    </TableView>
+
+    <!-- SALDO -->
+    <Label text="Saldo: R$ 0.00" fx:id="saldoLabel"/>
+
+</VBox>
