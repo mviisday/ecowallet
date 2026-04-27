@@ -1,4 +1,4 @@
-#  EcoWallet
+##  EcoWallet
 
 Aplicação desktop para controle financeiro pessoal desenvolvida em Java, utilizando conceitos de Programação Orientada a Objetos (POO), JavaFX para interface gráfica e Maven para gerenciamento do projeto.
 
