@@ -65,7 +65,7 @@ ecowallet/
 1. Clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/EcoWallet.git
+git clone https://github.com/mviisday/ecoWallet.git
 ```
 
 2. Abra o projeto no IntelliJ IDEA
