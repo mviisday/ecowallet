@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml">
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.unicatolica.controlador.ControladorPrincipal">
 
     <Label text="EcoWallet" />
 
-    <!-- CAMPOS -->
-    <TextField fx:id="descricaoField" promptText="Descrição"/>
-    <TextField fx:id="valorField" promptText="Valor"/>
-    <DatePicker fx:id="dataPicker"/>
+    <TextField fx:id="descricaoField" promptText="Descrição" />
+    <TextField fx:id="valorField" promptText="Valor" />
+    <DatePicker fx:id="dataPicker" />
 
-    <!-- BOTÕES -->
-    <HBox spacing="10">
-        <Button text="Adicionar Receita" fx:id="btnReceita"/>
-        <Button text="Adicionar Despesa" fx:id="btnDespesa"/>
+    <HBox alignment="CENTER" spacing="10">
+        <Button onAction="#adicionarReceita" text="Adicionar Receita" />
+        <Button onAction="#adicionarDespesa" text="Adicionar Despesa" />
     </HBox>
 
-    <!-- TABELA -->
     <TableView fx:id="tabelaTransacoes">
         <columns>
-            <TableColumn text="Descrição"/>
-            <TableColumn text="Valor"/>
-            <TableColumn text="Data"/>
-            <TableColumn text="Tipo"/>
+            <TableColumn fx:id="colunaDescricao" text="Descrição" />
+            <TableColumn fx:id="colunaValor" text="Valor" />
+            <TableColumn fx:id="colunaData" text="Data" />
+            <TableColumn fx:id="colunaTipo" text="Tipo" />
         </columns>
     </TableView>
 
-    <!-- SALDO -->
-    <Label text="Saldo: R$ 0.00" fx:id="saldoLabel"/>
+    <Label fx:id="saldoLabel" text="Saldo: R$ 0.00" />
 
 </VBox>
